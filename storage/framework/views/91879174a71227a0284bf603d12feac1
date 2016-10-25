@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $__env->yieldContent('title'); ?></title>
+    <meta name="_token" content="<?php echo csrf_token(); ?>" />
+    <link rel="stylesheet" href="<?php echo asset('assets/css/bootstrap.min.css'); ?>">
+    <link href="<?php echo asset('assets/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo asset('assets/plugins/pace/pace-theme-big-counter.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo asset('assets/css/style.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo asset('assets/css/main-style.css'); ?>" rel="stylesheet" />
+    <link href="<?php echo asset('assets/plugins/social-buttons/social-buttons.css'); ?>" rel="stylesheet" />
+    <?php echo $__env->yieldContent('style'); ?>
+</head>
+<body>
+<?php if(Auth::check()): ?>
+	<!-- wrapper -->
+	<div id="wrapper">
+	<!-- navbar top -->
+	<?php echo $__env->make('include.admin.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<!-- end navbar top -->
+	<!-- navbar side -->
+	<?php echo $__env->make('include.admin.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<!-- end navbar side -->
+	<?php echo $__env->yieldContent('content'); ?>
+	</div>
+<?php else: ?>
+    <?php echo $__env->yieldContent('content'); ?>
+<?php endif; ?>
+     <!-- Core Scripts - Include with every page -->
+    <script src="<?php echo asset('assets/plugins/jquery-1.10.2.js'); ?>"></script>
+    <script src="<?php echo asset('assets/plugins/bootstrap/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo asset('assets/plugins/metisMenu/jquery.metisMenu.js'); ?>"></script>
+    <script src="<?php echo asset('assets/plugins/pace/pace.js'); ?>"></script>
+    <script src="<?php echo asset('assets/scripts/siminta.js'); ?>"></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN' : $('meta[name="csrf_token"]').attr('content')
+            }
+        })
+    </script>
+    <!-- Page-Level Plugin Scripts-->
+    <?php echo $__env->yieldContent('script'); ?>
+</body>
+
+</html>

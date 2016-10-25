@@ -1,0 +1,30 @@
+<ul class="nav navbar-nav">
+	<li><?php echo Html::link('sample', 'Blog Home'); ?></li>
+	<?php if(Auth::check()): ?>
+	<li <?php if(Request::is('admin/post*')): ?> class="active" <?php endif; ?>>
+		<a href="/admin/post">Posts</a>
+	</li>
+	<li <?php if(Request::is('admin/tag*')): ?> class="active" <?php endif; ?>>
+		<a href="/admin/tag">Tags</a>
+	</li>
+	<li <?php if(Request::is('admin/upload*')): ?> class="active" <?php endif; ?>>
+		<a href="/admin/upload">Uploads</a>
+	</li> 
+	<?php endif; ?>
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+	<?php if(Auth::guest()): ?>
+	<li><?php echo Html::link('sample/login', 'Login'); ?></li>
+	<?php else: ?>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo e(Auth::user()->name); ?>
+
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li><?php echo Html::link('sample/logout', 'Logout'); ?></li>
+		</ul>
+	</li>
+	<?php endif; ?>
+</ul>

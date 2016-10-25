@@ -1,0 +1,48 @@
+<div class="col-lg-3">
+<!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu" >
+                    <li id="dropdown">
+                        <a href="#"><i class="fa fa-list fa-fw"></i>Kecamatan<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?php echo URL::route('map.kecamatan'); ?>">Semua Kecamatan</a>
+                            </li>
+                            <?php foreach($kecamatan as $kecamatan): ?>
+                        	<li>
+                        		<a href="<?php echo route('map.kecamatan.detail', $kecamatan->id); ?>"><?php echo e($kecamatan->nama_kecamatan); ?></a>
+                        	</li>
+                        	<?php endforeach; ?>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li id="dropdown">
+                        <a href="#"><i class="fa fa-list fa-fw"></i>Kategori<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?php echo URL::route('map.kategori'); ?>">Semua Kategori</a>
+                            </li>
+                            <?php foreach($kategori as $kategori): ?>
+                        	<li>
+                        		<a href="<?php echo route('map.kategori.detail', $kategori->id); ?>"><?php echo e($kategori->nama_kategori); ?></a>
+                        	</li>
+                        	<?php endforeach; ?>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+					<li id="dropdown">
+                    	<a href="<?php echo URL::route('map.directions'); ?>">Directions</a>
+	                </li>
+	                <li id="dropdown">
+	                    <a href="<?php echo URL::route('detect-map'); ?>">Deteksi Lokasi</a>
+	                </li>
+	            </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->
+</div>

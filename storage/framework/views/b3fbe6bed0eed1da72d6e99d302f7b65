@@ -1,0 +1,43 @@
+<?php $__env->startSection('title'); ?>
+    Lokasi Wifi-Corner Berdasar Kategori
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
+<script type="text/javascript">var centreGot = false;</script>
+    <?php echo $map['js']; ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div class="col-lg-9">
+    <?php echo $map['html']; ?>
+
+</div>
+<div class="col-lg-3"></div>
+<div class='col-lg-9'>
+	<div class="panel panel-default">
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+					<tbody>
+						<?php $no = 1; ?>
+						<?php foreach($infolist as $info): ?>
+						<tr>
+							<td><?php echo e($no++); ?></td>
+							<td><?php echo e($info->nama); ?></td>
+							<td><?php echo e($info->jalan); ?></td>
+							<td><?php echo e($info->kecamatan->nama_kecamatan); ?></td>
+							<td><?php echo e($info->kategori->nama_kategori); ?></td>
+							<td>
+								<a class="btn btn-danger btn-primary" href='<?php echo e(route('map.direction', $info->id)); ?>'>Lihat Rute</a>
+							</td>
+						</tr>
+						<?php endforeach; ?>
+					</tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.maindashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

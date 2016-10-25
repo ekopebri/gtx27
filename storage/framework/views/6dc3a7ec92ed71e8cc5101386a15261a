@@ -1,0 +1,84 @@
+<?php $__env->startSection('title'); ?>
+    Morris Page
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
+    <link href="<?php echo asset('assets/plugins/morris/morris-0.4.3.min.css'); ?>" rel="stylesheet" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!--  page-wrapper -->
+       
+        <div id="page-wrapper">
+            <div class="row">
+                 <!--  page header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Morris Charts</h1>
+                </div>
+                <!--end  page header -->
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--  Area Chart -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Area Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-area-chart"></div>
+                        </div>
+                    </div>
+                    <!-- End Area Chart -->
+                </div>
+               
+                <div class="col-lg-6">
+                     <!--  Bar Chart -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Bar Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-bar-chart"></div>
+                        </div>
+                    </div>
+            <!-- End Bar Chart -->
+                </div>
+                <div class="col-lg-6">
+                     <!--  Line Chart -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Line Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-line-chart"></div>
+                        </div>
+                    </div>
+                     <!--  End Line Chart -->
+                </div>
+                <div class="col-lg-6">
+                     <!--  Donut Chart -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Donut Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                        </div>
+                    </div>
+                    <!-- End Donut Chart -->
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+    <script src="<?php echo asset('assets/plugins/morris/raphael-2.1.0.min.js'); ?>"></script>
+    <script src="<?php echo asset('assets/plugins/morris/morris.js'); ?>"></script>
+    <script src="<?php echo asset('assets/scripts/morris-demo.js'); ?>"></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

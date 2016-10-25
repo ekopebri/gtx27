@@ -1,0 +1,39 @@
+<?php $__env->startSection('title'); ?>
+    Home / Admin
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
+    <link href="<?php echo asset('assets/plugins/morris/morris-0.4.3.min.css'); ?>" rel="stylesheet" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!--End Page Header -->
+            </div>
+
+            <div class="row">
+                <!-- Welcome -->
+                <div class="col-lg-12">
+                    Welcome <strong><?php echo e(Auth::user()->name); ?></strong>
+                </div>
+                <!--end  Welcome -->
+            </div>
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+    <script src="<?php echo asset('assets/plugins/morris/raphael-2.1.0.min.js'); ?>"></script>
+    <script src="<?php echo asset('assets/plugins/morris/morris.js'); ?>"></script>
+    <script src="<?php echo asset('assets/scripts/dashboard-demo.js'); ?>"></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

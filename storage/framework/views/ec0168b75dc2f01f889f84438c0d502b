@@ -1,0 +1,29 @@
+<?php $__env->startSection('title'); ?>
+Kecamatan <?php echo e($kecamatan->nama_kecamatan); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<div id="wrapper">
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <a class="btn btn-info pull-right" href="<?php echo e(route('kecamatan.index')); ?>">Back</a>
+          <h1>Kecamatan <?php echo e($kecamatan->nama_kecamatan); ?> </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="row">
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Nama Tempat</label>
+              <p><?php echo e($kecamatan->nama_kecamatan); ?></p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

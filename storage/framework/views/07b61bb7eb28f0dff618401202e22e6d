@@ -1,0 +1,42 @@
+<!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse">
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="<?php echo asset('/assets/img/user.jpg'); ?>" alt="">
+                            </div>
+                            <div class="user-info">
+                                <div><strong><?php echo e(Auth::user()->name); ?></strong></div>
+                                <div class="user-text-online">
+                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
+                                </div>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    <li class="">
+                        <a href="<?php echo URL::route('home'); ?>"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo URL::route('kecamatan.index'); ?>"><i class="fa fa-file fa-fw"></i>Manage Kecamatan</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo URL::route('kategori.index'); ?>"><i class="fa fa-file fa-fw"></i>Manage Kategori</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo URL::route('info.index'); ?>"><i class="fa fa-file fa-fw"></i>Manage Marker</a>
+                    </li>
+                    <li class="">
+                        <a href="<?php echo URL::route('user.index'); ?>"><i class="fa fa-file fa-fw"></i>Manage User</a>
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+        <!-- end navbar side -->

@@ -1,0 +1,57 @@
+<?php $__env->startSection('content'); ?>
+<div id="wrapper">
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <a class="btn btn-info pull-right" href="<?php echo e(route('marker.index')); ?>">Back</a>
+          <h1>Daftar Info Marker ID</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <?php echo Form::model($marker, ['method' => 'PUT', 'route' => ['marker.update', $marker->id],'enctype' => 'multipart/form-data']); ?>
+
+      <?php echo e(csrf_field()); ?>
+
+        <div class="row">
+          <input type="hidden" name="id" value="<?php echo e($marker->id); ?>">
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Nama Tempat</label>
+              <input type="text" name="nm_marker" value="<?php echo e($marker->nm_marker); ?>" id="nm_marker" placeholder="Nama Marker" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Alamat Tempat</label>
+              <input type="text" name="alamat" id="alamat" value="<?php echo e($marker->alamat); ?>" placeholder="Alamat Tempat" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Lattitude</label>
+              <input type="text" name="lat" id="lat" value="<?php echo e($marker->lat); ?>" placeholder="Masukkan Lat" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>longitude</label>
+              <input type="text" name="lng" id="lng" value="<?php echo e($marker->lng); ?>" placeholder="Masukkan Lng" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Icon</label>
+              <input type="file" name="icon" id="icon" value="<?php echo e($marker->icon); ?>">
+            </div>
+          </div>
+        </div>
+      <input type="submit" value="Update" class="btn btn-primary">
+      </form>
+
+    </div>
+  </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.dashboard', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
