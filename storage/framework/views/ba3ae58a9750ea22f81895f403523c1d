@@ -28,11 +28,13 @@
                                     <thead>
 										<th>ID</th>
 										<th>Nama Tempat</th>
-										<th>Alamat</th>
+                                        <th>Alamat</th>
+                                        <th>Fasilitas</th>
+                                        <th>Kecepatan Wifi</th>
+										<th>Image</th>
 										<th>Latitude</th>
                                         <th>Longitude</th>
                                         <th>Kecamatan</th>
-										<th>kategori</th>
 										<th>Action</th>
 									</thead>
 									<tbody>
@@ -40,11 +42,13 @@
 										<tr>
 											<td><?php echo e($info->id); ?></td>
 											<td width="50px"><?php echo e($info->nama); ?></td>
-											<td><?php echo e($info->jalan); ?></td>
+                                            <td><?php echo e($info->jalan); ?></td>
+                                            <td><?php echo e($info->fasilitas); ?></td>
+                                            <td><?php echo e($info->speed); ?></td>
+											<td><?php echo e($info->gambar); ?></td>
 											<td><?php echo e($info->kordinat_x); ?></td>
                                             <td><?php echo e($info->kordinat_y); ?></td>
                                             <td><?php echo e($info->kecamatan->nama_kecamatan); ?></td>
-											<td><?php echo e($info->kategori->nama_kategori); ?></td>
 											<td>
 												<a class="btn btn-success btn-edit" href='<?php echo e(route('info.show', $info->id)); ?>'><i class="glyphicon glyphicon-eye-open"></i></a>
                                                 <a class="btn btn-success btn-edit" href='<?php echo e(route('info.edit', $info->id)); ?>'><i class="glyphicon glyphicon-edit"></i></a>

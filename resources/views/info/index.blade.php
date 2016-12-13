@@ -29,11 +29,13 @@
                                     <thead>
 										<th>ID</th>
 										<th>Nama Tempat</th>
-										<th>Alamat</th>
+                                        <th>Alamat</th>
+                                        <th>Fasilitas</th>
+                                        <th>Kecepatan Wifi</th>
+										<th>Image</th>
 										<th>Latitude</th>
                                         <th>Longitude</th>
                                         <th>Kecamatan</th>
-										<th>kategori</th>
 										<th>Action</th>
 									</thead>
 									<tbody>
@@ -41,11 +43,13 @@
 										<tr>
 											<td>{{$info->id}}</td>
 											<td width="50px">{{$info->nama}}</td>
-											<td>{{$info->jalan}}</td>
+                                            <td>{{$info->jalan}}</td>
+                                            <td>{{$info->fasilitas}}</td>
+                                            <td>{{$info->speed}}</td>
+											<td>{{$info->gambar}}</td>
 											<td>{{$info->kordinat_x}}</td>
                                             <td>{{$info->kordinat_y}}</td>
                                             <td>{{$info->kecamatan->nama_kecamatan}}</td>
-											<td>{{$info->kategori->nama_kategori}}</td>
 											<td>
 												<a class="btn btn-success btn-edit" href='{{route('info.show', $info->id)}}'><i class="glyphicon glyphicon-eye-open"></i></a>
                                                 <a class="btn btn-success btn-edit" href='{{route('info.edit', $info->id)}}'><i class="glyphicon glyphicon-edit"></i></a>

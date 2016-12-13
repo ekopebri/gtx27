@@ -26,9 +26,6 @@
                         <a href="{!!URL::route('kecamatan.index')!!}"><i class="fa fa-file fa-fw"></i>Manage Kecamatan</a>
                     </li>
                     <li class="">
-                        <a href="{!!URL::route('kategori.index')!!}"><i class="fa fa-file fa-fw"></i>Manage Kategori</a>
-                    </li>
-                    <li class="">
                         <a href="{!!URL::route('info.index')!!}"><i class="fa fa-file fa-fw"></i>Manage Marker</a>
                     </li>
                     <li class="">

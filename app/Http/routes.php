@@ -13,14 +13,15 @@
 
 //UTAMA
 Route::get('/', array('as' => 'map.home', 'uses' => 'MapController@index'));
-Route::get('/distanceMatrix', array('as' => 'map.home', 'uses' => 'MapController@getDistanceMatrix'));
 Route::get('/map/kecamatan', array('as' => 'map.kecamatan', 'uses' => 'MapController@kecamatan')); 
+Route::get('/map/detail/{id}', array('as' => 'map.detail', 'uses' => 'MapController@detail')); 
 Route::get('/map/kecamatan/{id}', array('as' => 'map.kecamatan.detail', 'uses' => 'MapController@kecamatandetail')); 
 Route::get('/map/kategori', array('as' => 'map.kategori', 'uses' => 'MapController@kategori'));
 Route::get('/map/kategori/{id}', array('as' => 'map.kategori.detail', 'uses' => 'MapController@kategoridetail'));
 Route::get('/map/directions', array('as' => 'map.directions', 'uses' => 'MapController@directions'));
 Route::get('/map/direction/{id}', array('as' => 'map.direction', 'uses' => 'MapController@direction'));
 Route::get('/deteksi-lokasi', array('as' => 'detect-map', 'uses' => 'MapController@geolocation'));
+
 
 //Authentication process
 Route::get('auth/login', array('as' => 'login', 'uses' => 'Auth\AuthController@getLogin'));

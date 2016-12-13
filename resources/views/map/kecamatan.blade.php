@@ -24,7 +24,6 @@
 							<td>{{$info->nama}}</td>
 							<td>{{$info->jalan}}</td>
 							<td>{{$info->kecamatan->nama_kecamatan}}</td>
-							<td>{{$info->kategori->nama_kategori}}</td>
 							<td>
 								<a class="btn btn-danger btn-primary" href='{{route('map.direction', $info->id)}}'>Lihat Rute</a>
 							</td>
