@@ -26,6 +26,10 @@ Route::get('/deteksi-lokasi', array('as' => 'detect-map', 'uses' => 'MapControll
 Route::get('auth/login', array('as' => 'login', 'uses' => 'Auth\AuthController@getLogin'));
 Route::post('auth/login', array('as' => 'login', 'uses' => 'Auth\AuthController@postLogin'));
 Route::get('auth/logout', array('as' => 'logout', 'uses' => 'Auth\AuthController@getLogout'));
+//Auth Login
+//Route::get('admin/login', array('as' => 'admin.login', 'uses' => 'AdminController@login'));
+//Route::post('admin/login', array('as' => 'admin.login', 'uses' => 'AdminController@doLogin'));
+//Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'AdminController@logout'));
 
 Route::group(['middleware' => 'auth'], function() {
 	Route::get('admin', array('as' => 'home', 'uses' => 'AdminController@index'));

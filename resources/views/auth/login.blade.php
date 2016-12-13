@@ -16,6 +16,13 @@
                     <div class="panel-heading">
                         <h3 class="panel-title"><center>Welcome Admin, Please Sign In</center></h3>
                     </div>
+                       @if (count($errors) > 0)
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
                     <div class="panel-body">
                     
                         <form role="form" method="POST" action="{{URL::route('login')}}">
