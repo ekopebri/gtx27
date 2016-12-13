@@ -19,20 +19,6 @@
                         </ul>
                         <!-- second-level-items -->
                     </li>
-                    <li id="dropdown">
-                        <a href="#"><i class="fa fa-list fa-fw"></i>Kategori<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="{!!URL::route('map.kategori')!!}">Semua Kategori</a>
-                            </li>
-                            @foreach($kategori as $kategori)
-                        	<li>
-                        		<a href="{!!route('map.kategori.detail', $kategori->id)!!}">{{$kategori->nama_kategori}}</a>
-                        	</li>
-                        	@endforeach
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
 					<li id="dropdown">
                     	<a href="{!!URL::route('map.directions')!!}">Directions</a>
 	                </li>

@@ -26,6 +26,9 @@ Create Informasi Data
               </ul>
           </div>
         <?php endif; ?>
+        <?php if(isset($success)): ?>
+          <div class="alert alert-success"> <?php echo e($success); ?> </div>
+        <?php endif; ?>
           <div class="col-xs-18 col-md-12">
             <div class="form-group">
               <label>Nama Tempat</label>
@@ -38,16 +41,34 @@ Create Informasi Data
               <input type="text" name="jalan" id="jalan" placeholder="Alamat" class="form-control">
             </div>
           </div>
-		  <div class="col-xs-18 col-md-12">
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Fasilitas</label>
+              <input type="text" name="fasilitas" placeholder="Fasilitas" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Kecepatan Wi-Fi</label>
+              <input type="text" name="speed" placeholder="Kecepatan WIFI" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Image</label>
+              <input type="file" name="gambar">
+            </div>
+          </div>
+		      <div class="col-xs-18 col-md-12">
             <div class="form-group">
               <label>Latitude</label>
-              <input type="text" name="kordinat_x" id="kordinat_x" placeholder="Latitude" class="form-control">
+              <input type="text" name="kordinat_x" placeholder="Latitude" class="form-control">
             </div>
           </div>
           <div class="col-xs-18 col-md-12">
             <div class="form-group">
               <label>Longitude</label>
-              <input type="text" name="kordinat_y" id="kordinat_y" placeholder="Longitude" class="form-control">
+              <input type="text" name="kordinat_y" placeholder="Longitude" class="form-control">
             </div>
           </div>
           <div class="col-xs-18 col-md-12">
@@ -56,16 +77,6 @@ Create Informasi Data
   			  <select class="form-control" name="id_kecamatan">
   			  	<?php foreach($kecamatan as $kecamatan): ?>
   			  	<option value="<?php echo e($kecamatan->id); ?>"><?php echo e($kecamatan->nama_kecamatan); ?></option>
-  			  	<?php endforeach; ?>
-  			  </select>
-            </div>
-          </div>
-          <div class="col-xs-18 col-md-12">
-            <div class="form-group">
-  			  <label for="sel1">Kategori</label>
-  			  <select class="form-control" name="id_kategori">
-  			  	<?php foreach($kategori as $kategori): ?>
-  			  	<option value="<?php echo e($kategori->id); ?>"><?php echo e($kategori->nama_kategori); ?></option>
   			  	<?php endforeach; ?>
   			  </select>
             </div>

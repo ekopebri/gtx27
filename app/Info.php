@@ -10,7 +10,10 @@ class Info extends Model
     
     protected $fillable=[
     	'nama',
-    	'jalan',
+        'jalan',
+        'fasilitas',
+        'speed',
+    	'gambar',
     	'kordinat_x',
     	'kordinat_y',
     	'id_kecamatan',

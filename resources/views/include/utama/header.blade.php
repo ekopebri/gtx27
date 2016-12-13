@@ -19,9 +19,6 @@
                 <li class="dropdown">
                     <a href="{!!URL::route('map.kecamatan')!!}">Kecamatan</a>
                 </li>
-                <li class="dropdown">
-                    <a href="{!!URL::route('map.kategori')!!}">Kategori</a>
-                </li>
                 <li>
                     <a href="{!!URL::route('map.directions')!!}">Directions</a>
                 </li>

@@ -53,20 +53,28 @@ Edit Informasi {{$info->nama}}
           </div>
           <div class="col-xs-18 col-md-12">
             <div class="form-group">
-          <label for="sel1">Kecamatan</label>
-          <select class="form-control" name="id_kecamatan">
-            @foreach($kecamatan as $kecamatan)
-            <option value="{{$kecamatan->id}}" @if($info->id_kecamatan == $kecamatan->id) selected='selected' @endif>{{$kecamatan->nama_kecamatan}}</option>
-            @endforeach
-          </select>
+              <label>Fasilitas</label>
+              <input type="text" name="fasilitas" value="{{$info->fasilitas}}" id="fasilitas" placeholder="Fasilitas" class="form-control">
             </div>
           </div>
           <div class="col-xs-18 col-md-12">
             <div class="form-group">
-          <label for="sel1">Kategori</label>
-          <select class="form-control" name="id_kategori">
-            @foreach($kategori as $kategori)
-            <option value="{{$kategori->id}}" @if($info->id_kategori == $kategori->id) selected='selected' @endif.>{{$kategori->nama_kategori}}</option>
+              <label>Kecepatan Wifi</label>
+              <input type="text" name="speed" value="{{$info->speed}}" id="speed" placeholder="Kecepatan Wifi" class="form-control">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+          <label for="sel1">Picture</label>
+          <input type="file" name="gambar">
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+          <label for="sel1">Kecamatan</label>
+          <select class="form-control" name="id_kecamatan">
+            @foreach($kecamatan as $kecamatan)
+            <option value="{{$kecamatan->id}}" @if($info->id_kecamatan == $kecamatan->id) selected='selected' @endif>{{$kecamatan->nama_kecamatan}}</option>
             @endforeach
           </select>
             </div>

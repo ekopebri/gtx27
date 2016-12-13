@@ -27,7 +27,25 @@ Informasi {{$info->nama}}
               <p>{{$info->jalan}}</p>
             </div>
           </div>
-		  <div class="col-xs-18 col-md-12">
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Fasilitas</label>
+              <p>{{$info->fasilitas}}</p>
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Kecepatan Wi-Fi</label>
+              <p>{{$info->speed}}</p>
+            </div>
+          </div>
+          <div class="col-xs-18 col-md-12">
+            <div class="form-group">
+              <label>Gambar</label>
+              <img src="{{asset('uploads').'/'}}{{$info->gambar}}" width="900px" class="img-responsive">
+            </div>
+          </div>
+		      <div class="col-xs-18 col-md-12">
             <div class="form-group">
               <label>Latitude</label>
               <p>{{$info->kordinat_x}}</p>
@@ -43,12 +61,6 @@ Informasi {{$info->nama}}
             <div class="form-group">
   			  <label for="sel1">Kecamatan</label>
               <p>{{$kecamatan->nama_kecamatan}}</p>
-            </div>
-          </div>
-          <div class="col-xs-18 col-md-12">
-            <div class="form-group">
-  			  <label for="sel1">Kategori</label>
-              <p>{{$kategori->nama_kategori}}</p>
             </div>
           </div>
         </div>

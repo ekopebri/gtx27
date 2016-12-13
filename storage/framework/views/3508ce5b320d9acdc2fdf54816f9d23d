@@ -25,7 +25,6 @@
 							<td><?php echo e($info->nama); ?></td>
 							<td><?php echo e($info->jalan); ?></td>
 							<td><?php echo e($info->kecamatan->nama_kecamatan); ?></td>
-							<td><?php echo e($info->kategori->nama_kategori); ?></td>
 							<td>
 								<a class="btn btn-danger btn-primary" href='<?php echo e(route('map.direction', $info->id)); ?>'>Lihat Rute</a>
 							</td>
